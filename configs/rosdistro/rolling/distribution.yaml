@@ -1,0 +1,20 @@
+%YAML 1.1
+# Minimal distribution — single ros_tokio_demo entry on Ubuntu resolute.
+---
+release_platforms:
+  ubuntu:
+  - resolute
+repositories:
+  ros_tokio_demo:
+    release:
+      tags:
+        release: release/rolling/{package}/{version}
+      url: https://github.com/Blast545/ros_tokio_demo-release.git
+      version: 0.1.0-1
+    source:
+      type: git
+      url: https://github.com/Blast545/ros_tokio_demo.git
+      version: main
+    status: developed
+type: distribution
+version: 1

@@ -1,0 +1,8 @@
+venv/
+buildfarm/
+repo/
+source_crate/
+release_repo/
+__pycache__/
+*.pyc
+.claude/settings.local.json
