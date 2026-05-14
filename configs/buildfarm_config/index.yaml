@@ -5,6 +5,7 @@ distributions:
   rolling:
     release_builds:
       default: rolling/release-build.yaml
+jenkins_url: http://localhost:8080
 notification_emails: []
 prerequisites:
   debian_repositories: []

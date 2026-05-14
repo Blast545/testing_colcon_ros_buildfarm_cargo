@@ -14,4 +14,4 @@ git add -A
 git -c user.email=jjperez@ekumenlabs.com -c user.name='Jorge Perez' commit -q -m 'ros_tokio_demo 0.1.0-1 for rolling'
 git branch -M release/rolling/ros_tokio_demo
 git tag release/rolling/ros_tokio_demo/0.1.0-1
-git remote add origin https://github.com/Blast545/ros_tokio_demo-release.git
+git remote add origin git@github.com:Blast545/ros_tokio_demo-release.git

@@ -1,8 +1,10 @@
 venv/
 buildfarm/
 repo/
+log/
 source_crate/
 release_repo/
+configs/rosdistro/rolling-cache.yaml
 __pycache__/
 *.pyc
 .claude/settings.local.json
