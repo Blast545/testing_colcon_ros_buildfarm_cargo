@@ -9,8 +9,16 @@ mkdir release_repo
 cp -r source_crate/. release_repo/
 rm -rf release_repo/.git
 cd release_repo
-bloom-generate rosdebian --os-name ubuntu --os-version resolute --ros-distro rolling --debian-inc 1
 git init -q
+git add -A
+git -c user.email=jjperez@ekumenlabs.com -c user.name='Jorge Perez' commit -q -m 'upstream 0.1.0'
+git tag upstream/0.1.0
+bloom-generate rosdebian --os-name ubuntu --os-version resolute --ros-distro rolling --debian-inc 1
+cat > debian/gbp.conf <<'EOF'
+[git-buildpackage]
+upstream-tree=tag
+upstream-tag=upstream/0.1.0
+EOF
 git add -A
 git -c user.email=jjperez@ekumenlabs.com -c user.name='Jorge Perez' commit -q -m 'ros_tokio_demo 0.1.0-1 for rolling'
 git branch -M debian/ros-rolling-ros-tokio-demo_0.1.0-1_resolute
